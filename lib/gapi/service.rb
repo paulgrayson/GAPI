@@ -15,6 +15,8 @@ module Gapi
       @middle = middle
     end
    
+    # dimensions and metrics are arrays e.g. ['ga:date', 'ga:sources'] - see Google Analytics Data Export API
+    # filters and sort follow Google Analytics Data Export API documentation e.g. to sort most recent date first: -ga:date
     # Must be called from a fiber if EmOauthMiddle used
     def fetch( start_date, end_date, dimensions, metrics, filters=nil, max_results=nil, sort=nil )
       opts = query_opts( start_date, end_date, dimensions, metrics, filters, max_results, sort )
