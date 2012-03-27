@@ -14,6 +14,10 @@ There is also middleware for:
 * making requests using event machine + oauth + Ruby 1.9 fibers (async without callbacks) - **EmOauthMiddle**
 * testing using fixture files - **FixtureMiddle**
 
+## Installation
+
+gem install gapi
+
 ## Example: fetch some data using email and password auth
 
 <pre>
