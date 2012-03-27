@@ -6,6 +6,7 @@ which supports rack style middleware
 ## Example: fetch some data using email and password auth
 
 <pre>
+<code>
   # setup gapi to use simple login with email and password
   middle = Gapi::LoginMiddle.new( 'email-with-access-to-google-analytics@email.com',
                                   'password' )
@@ -37,5 +38,6 @@ which supports rack style middleware
   else
     puts "Error: #{code} http status returned"
   end
+</code>
 </pre>
 
