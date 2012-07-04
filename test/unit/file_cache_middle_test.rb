@@ -1,5 +1,5 @@
 require 'test/unit'
-require File.join( File.dirname( __FILE__ ), '..', '..', 'gapi.rb' )
+require File.join( File.dirname( __FILE__ ), '..', '..', 'lib', 'gapi.rb' )
 require 'date'
 require 'mocha'
 
@@ -14,7 +14,7 @@ class FileCacheMiddleTest < Test::Unit::TestCase
     if File.exists?( @cache_dir )
       clean_cache_dir
     else
-      Dir.mkdir( @cache_dir )
+      FileUtils.mkdir_p( @cache_dir )
     end
     cache_middle = Gapi::FileCacheMiddle.new( @fixture_middle, @cache_dir, @uid )
     @service = Gapi::Service.new( cache_middle )

@@ -1,5 +1,5 @@
 require 'test/unit'
-require File.join( File.dirname( __FILE__ ), '..', '..', 'gapi.rb' )
+require File.join( File.dirname( __FILE__ ), '..', '..', 'lib', 'gapi.rb' )
 require 'date'
 
 class ServiceTest < Test::Unit::TestCase
